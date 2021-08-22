@@ -1,0 +1,33 @@
+unit EnviarEmail_view;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.StdCtrls, Vcl.ExtCtrls;
+
+type
+  TEnviarEmailView = class(TForm)
+    lblEmail: TLabel;
+    edtEmail: TEdit;
+    lblSenha: TLabel;
+    edtSenha: TEdit;
+    btnCadastrar: TSpeedButton;
+    edtSmtp: TEdit;
+    lblSmtp: TLabel;
+    pnlFundo: TPanel;
+    lblTitulo: TLabel;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  EnviarEmailView: TEnviarEmailView;
+
+implementation
+
+{$R *.dfm}
+
+end.

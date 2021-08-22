@@ -1,0 +1,29 @@
+unit UGetApiData_service;
+
+interface
+
+type
+   TGetApiData = class
+      private
+
+      public
+         constructor Create;
+         destructor Destroy; override;
+
+   end;
+
+implementation
+
+{ TController }
+
+constructor TGetApiData.Create;
+begin
+   inherited Create;
+end;
+
+destructor TGetApiData.Destroy;
+begin
+  inherited;
+end;
+
+end.

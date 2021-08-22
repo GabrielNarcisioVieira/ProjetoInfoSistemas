@@ -1,0 +1,128 @@
+﻿unit UClienteController;
+
+interface
+
+uses
+   {Bibliotecas do Delphi}
+   FireDAC.Stan.Intf, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+   FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+   FireDAC.Comp.Client, FireDAC.Stan.Option, Dialogs, System.SysUtils,
+   System.Classes, JPEG,
+
+   {Units do Sistema}
+   UPessoa_model, UEndereco_model;
+
+type
+   TClientesController = class
+      private
+         {Funções de inicialização do objeto}
+
+      public
+         constructor Create;
+         destructor Destroy; override;
+
+         {Funções públicas de validação de dados}
+         function ValidarCPF(pCPF: String): Boolean;
+
+         {Funções para gravação de dados}
+         function CadastrarCliente(pCliente: TPessoa): Boolean;
+
+         { Funções para pesquisa de dados }
+         function ImagemPadraoCliente: TStream;
+         function PesquisarCliente(pCliente: TCliente; pOrdem: String): TDataSource;
+   end;
+
+implementation
+
+{ TController }
+
+constructor TClientesController.Create;
+begin
+   inherited Create;
+end;
+
+destructor TClientesController.Destroy;
+begin
+  inherited;
+end;
+
+function TClientesController.ImagemPadraoCliente: TStream;
+var
+   xClienteDao: TClienteDao;
+begin
+   xClienteDao := nil;
+   xClienteDao := TClienteDao.Create;
+
+   Result := xClienteDao.ImagemPadraoCliente;
+end;
+
+function TClientesController.PesquisarCliente(pCliente: TCliente;
+  pOrdem: String): TDataSource;
+var
+   xClienteDao: TClienteDao;
+begin
+   xClienteDao := nil;
+   xClienteDao := TClienteDao.Create;
+
+   Result := xClienteDao.PesquisarCliente(pCliente, pOrdem);
+end;
+
+procedure TClientesController.SalvarImagemPadrao(pImagem: String);
+var
+   xClienteDao: TClienteDao;
+begin
+   // Rotina deve ser utilizada somente para salvar a imagem padrão no banco de
+   //  dados, todas as imagens de Clientes devem ser armazenadas na pasta padrão
+   //  de imagens do sistema.
+
+   xClienteDao := nil;
+   xClienteDao := TClienteDao.Create;
+
+   xClienteDao.SalvarImagemPadrao(pImagem);
+end;
+
+function TClientesController.CadastrarCliente(pCliente: TCliente): Boolean;
+var
+   xClienteDao: TClienteDao;
+begin
+   Result := False;
+   xClienteDao := nil;
+   xClienteDao := TClienteDao.Create;
+   try
+      if xClienteDao.GravarDados(pCliente) then
+      begin
+         Result := True;
+      end;
+   finally
+      if xClienteDao <> nil then
+         FreeAndNil(xClienteDao);
+   end;
+end;
+
+function TClientesController.ValidarCNPJ(pCNPJ: String): Boolean;
+var
+   xPessoa: TPessoa;
+begin
+   xPessoa := Nil;
+   xPessoa := TPessoa.Create;
+   Result := xPessoa.ValidarCNPJ(pCNPJ);
+
+   if xPessoa <> nil then
+      FreeAndNil(xPessoa);
+end;
+
+function TClientesController.ValidarCPF(pCPF: String): Boolean;
+var
+   xPessoa: TPessoa;
+begin
+   xPessoa := Nil;
+   xPessoa := TPessoa.Create;
+   Result := xPessoa.ValidarCPF(pCPF);
+
+   if xPessoa <> nil then
+      FreeAndNil(xPessoa);
+end;
+
+end.

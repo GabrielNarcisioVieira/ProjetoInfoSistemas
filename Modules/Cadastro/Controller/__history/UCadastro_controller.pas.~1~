@@ -1,0 +1,120 @@
+unit UCadastro_controller;
+
+interface
+
+uses
+   {Bibliotecas do Delphi}
+   FireDAC.Stan.Intf, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+   FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+   FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param,
+   FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+   FireDAC.Comp.Client, FireDAC.Stan.Option, Dialogs, System.SysUtils,
+   System.Classes,
+
+   {Units do Sistema}
+   UPessoa_model, UEndereco_model, UMensagem;
+
+type
+   TCadastroController = class
+      private
+
+      public
+         constructor Create;
+         destructor Destroy; override;
+
+         {Funções de validação de dados}
+         function ValidarCampos(pEndereco: TEndereco; pPessoa: TPessoa): Boolean;
+         function ValidarCPF(pCPF: String): Boolean;
+
+         {Funções para gravação de dados}
+         function CadastrarPessoa(pPessoa: TPessoa): Boolean;
+
+   end;
+
+implementation
+
+{ TController }
+
+constructor TCadastroController.Create;
+begin
+   inherited Create;
+end;
+
+destructor TCadastroController.Destroy;
+begin
+  inherited;
+end;
+
+function TCadastroController.ValidarCampos(pEndereco: TEndereco;
+  pPessoa: TPessoa): Boolean;
+begin
+  pPessoa.Telefone := StringReplace(pPessoa.Telefone, '.', '', [rfReplaceAll, rfIgnoreCase]);
+  pPessoa.Telefone := StringReplace(pPessoa.Telefone, '-', '', [rfReplaceAll, rfIgnoreCase]);
+  pPessoa.Telefone := StringReplace(pPessoa.Telefone, '(', '', [rfReplaceAll, rfIgnoreCase]);
+  pPessoa.Telefone := StringReplace(pPessoa.Telefone, ')', '', [rfReplaceAll, rfIgnoreCase]);
+  pPessoa.Telefone := StringReplace(pPessoa.Telefone, ' ', '', [rfReplaceAll, rfIgnoreCase]);
+
+  pEndereco.CEP := StringReplace(pEndereco.CEP, '.', '', [rfReplaceAll, rfIgnoreCase]);
+  pEndereco.CEP := StringReplace(pEndereco.CEP, '-', '', [rfReplaceAll, rfIgnoreCase]);
+  pEndereco.CEP := StringReplace(pEndereco.CEP, ' ', '', [rfReplaceAll, rfIgnoreCase]);
+
+  if pPessoa.Nome.IsEmpty  then
+    Result := false;
+
+  if pPessoa.Identidade.IsEmpty  then
+    Result := false;
+
+  if pPessoa.CPF.IsEmpty  then
+    Result := false;
+
+  if pPessoa.Telefone.IsEmpty  then
+    Result := false;
+
+  if pPessoa.Email.IsEmpty  then
+    Result := false;
+
+  if pEndereco.Logradouro.IsEmpty  then
+    Result := false;
+
+  if pEndereco.Bairro.IsEmpty  then
+    Result := false;
+
+  if pEndereco.Cidade.IsEmpty  then
+    Result := false;
+
+    if pEndereco.Estado.IsEmpty  then
+    Result := false;
+
+  if pEndereco.Pais.IsEmpty  then
+    Result := false;
+
+  if pEndereco.CEP.IsEmpty  then
+    Result := false;
+end;
+
+function TCadastroController.ValidarCPF(pCPF: String): Boolean;
+var
+   xPessoa: TPessoa;
+begin
+  xPessoa := nil;
+  xPessoa := TPessoa.Create;
+
+  Result := xPessoa.ValidarCPF(pCPF);
+end;
+
+function TCadastroController.CadastrarPessoa(pPessoa: TPessoa): Boolean;
+begin
+   Result := False;
+//   xClienteDao := nil;
+//   xClienteDao := TClienteDao.Create;
+   try
+//      if xClienteDao.GravarDados(pCliente) then
+//      begin
+//         Result := True;
+//      end;
+   finally
+//      if xClienteDao <> nil then
+//         FreeAndNil(xClienteDao);
+   end;
+end;
+end.

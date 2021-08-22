@@ -1,0 +1,27 @@
+unit UEnviarEmail_service;
+
+interface
+
+uses
+  {Bibliotecas}
+  XMLDoc, XMLIntf, SysUtils;
+
+type
+  TEnviarEmail = class
+    private
+
+    public
+      function EnviarEmail(xDocument: TXMLDocument): Boolean;
+
+  end;
+
+implementation
+
+{ TEnviarEmail }
+
+function TEnviarEmail.EnviarEmail(xDocument: TXMLDocument): Boolean;
+begin
+
+end;
+
+end.

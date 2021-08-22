@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/08/20 08:58:48.000.938,=C:\Users\gabri\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/20 09:02:29.000.947,D:\Projects\Desktop\Prova InfoSistemas\MainView.pas=C:\Users\gabri\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/20 09:02:29.000.947,D:\Projects\Desktop\Prova InfoSistemas\MainView.dfm=C:\Users\gabri\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/08/20 09:02:40.000.699,D:\Projects\Desktop\Prova InfoSistemas\Prova_project.dproj=C:\Users\gabri\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/08/20 09:44:51.000.818,=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/20 09:45:41.000.027,D:\Projects\Desktop\Prova InfoSistemas\Model\UserModel.pas=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/20 09:47:54.000.495,=D:\Projects\Desktop\Prova InfoSistemas\Model\UEndereco.pas</Transaction>
+    <Transaction>2021/08/20 09:47:54.000.463,=D:\Projects\Desktop\Prova InfoSistemas\Model\UCliente.pas</Transaction>
+    <Transaction>2021/08/20 09:50:29.000.452,D:\Projects\Desktop\Prova InfoSistemas\Model\UEndereco_model.pas=D:\Projects\Desktop\Prova InfoSistemas\Model\UEndereco.pas</Transaction>
+    <Transaction>2021/08/20 09:50:33.000.402,D:\Projects\Desktop\Prova InfoSistemas\Model\UCliente.pas=</Transaction>
+    <Transaction>2021/08/20 09:50:48.000.240,D:\Projects\Desktop\Prova InfoSistemas\Model\UPessoa_model.pas=D:\Projects\Desktop\Prova InfoSistemas\Model\UserModel.pas</Transaction>
+    <Transaction>2021/08/20 09:57:49.000.793,=D:\Projects\Desktop\Prova InfoSistemas\Controller\UEnderecoController.pas</Transaction>
+    <Transaction>2021/08/20 09:57:49.000.752,=D:\Projects\Desktop\Prova InfoSistemas\Controller\UClienteController.pas</Transaction>
+    <Transaction>2021/08/20 10:01:40.000.520,D:\Projects\Desktop\Prova InfoSistemas\Controller\UEnderecoController.pas=</Transaction>
+    <Transaction>2021/08/20 10:02:08.000.741,D:\Projects\Desktop\Prova InfoSistemas\Controller\UCadastroController.pas=D:\Projects\Desktop\Prova InfoSistemas\Controller\UClienteController.pas</Transaction>
+    <Transaction>2021/08/20 10:28:40.000.366,D:\Projects\Desktop\Prova InfoSistemas\Controller\UCadastro_controller.pas=D:\Projects\Desktop\Prova InfoSistemas\Controller\UCadastroController.pas</Transaction>
+    <Transaction>2021/08/20 11:16:15.000.472,=D:\Projects\Desktop\Prova InfoSistemas\Components\TMessage\TMessage.pas</Transaction>
+    <Transaction>2021/08/20 11:21:11.000.010,=D:\Projects\Desktop\Prova InfoSistemas\Components\UMensagem.pas</Transaction>
+    <Transaction>2021/08/20 13:53:20.000.166,=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/20 13:56:52.000.918,=D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UGetApi_service.pas</Transaction>
+    <Transaction>2021/08/20 13:57:55.000.307,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UGetApi_service.pas=D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UGetApiData_service.pas</Transaction>
+    <Transaction>2021/08/21 19:44:11.800,=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 19:44:35.798,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UGerarXml.pas=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 19:49:45.348,=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 19:49:55.076,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UEnviarEmail.pas=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 21:14:29.126,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UEnviarEmail.pas=</Transaction>
+    <Transaction>2021/08/21 21:15:59.806,=D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\Services\UEnviarEmail_service.pas</Transaction>
+    <Transaction>2021/08/21 22:33:41.517,=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 22:37:18.243,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\View\EnviarEmail_view.dfm=D:\Projects\Desktop\Prova InfoSistemas\Unit1.dfm</Transaction>
+    <Transaction>2021/08/21 22:37:18.243,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\View\EnviarEmail_view.pas=D:\Projects\Desktop\Prova InfoSistemas\Unit1.pas</Transaction>
+    <Transaction>2021/08/21 22:40:22.632,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\View\EnviarEmail_view.pas=</Transaction>
+    <Transaction>2021/08/21 22:40:29.659,=D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\View\EnviarEmail_view.pas</Transaction>
+    <Transaction>2021/08/21 22:53:30.746,D:\Projects\Desktop\Prova InfoSistemas\Modules\Cadastro\View\EnviarEmail_view.pas=</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Components"/>
+    <File Path="Components\UMensagem.pas"/>
+    <File Path="Components\UMensagem.dfm"/>
+    <File Path="Model"/>
+    <File Path="Model\UEndereco_model.pas"/>
+    <File Path="Model\UPessoa_model.pas"/>
+    <File Path="Modules"/>
+    <File Path="Modules\Cadastro"/>
+    <File Path="Modules\Cadastro\Controller"/>
+    <File Path="Modules\Cadastro\Controller\UCadastro_controller.pas"/>
+    <File Path="Modules\Cadastro\Services"/>
+    <File Path="Modules\Cadastro\Services\UGetApiData_service.pas"/>
+    <File Path="Modules\Cadastro\Services\UGerarXml.pas"/>
+    <File Path="Modules\Cadastro\Services\UEnviarEmail_service.pas"/>
+    <File Path="MainView.pas"/>
+    <File Path="MainView.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

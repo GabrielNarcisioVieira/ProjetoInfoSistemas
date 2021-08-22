@@ -1,0 +1,19 @@
+program Prova_project;
+
+uses
+  Vcl.Forms,
+  MainView in 'MainView.pas' {Main},
+  UPessoa_model in 'Model\UPessoa_model.pas',
+  UEndereco_model in 'Model\UEndereco_model.pas',
+  UCadastro_controller in 'Controller\UCadastro_controller.pas',
+  UMensagem in 'Components\UMensagem.pas' {FrmMensagens};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMain, Main);
+  Application.CreateForm(TFrmMensagens, FrmMensagens);
+  Application.Run;
+end.

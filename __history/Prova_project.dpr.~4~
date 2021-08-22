@@ -1,0 +1,17 @@
+program Prova_project;
+
+uses
+  Vcl.Forms,
+  MainView in 'MainView.pas' {main_view},
+  UPessoa_model in 'Model\UPessoa_model.pas',
+  UEndereco_model in 'Model\UEndereco_model.pas',
+  UCadastro_controller in 'Controller\UCadastro_controller.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(Tmain_view, main_view);
+  Application.Run;
+end.
